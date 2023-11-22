@@ -1,7 +1,9 @@
+import Hero from "./components/Hero.tsx";
+
 export default function Home() {
   return (
-    <>
-      <h1>ola mundo sou a pagina principal</h1>
-    </>
+    <div className="bg-white pb-6 sm:pb-8 lg:pb-12">
+      <Hero />
+    </div>
   );
 }
