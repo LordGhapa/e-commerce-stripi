@@ -6,3 +6,12 @@ export interface simplifiedProduct {
   slug: string;
   categoryName: string;
 }
+export interface fullProduct {
+  _id: string;
+  images: any;
+  description: string;
+  price: number;
+  name: string;
+  slug: string;
+  categoryName: string;
+}
