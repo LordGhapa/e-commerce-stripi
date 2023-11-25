@@ -1,3 +1,5 @@
+import AddToBag from "@/app/components/AddToBag";
+import CheckOutNow from "@/app/components/CheckOutNow";
 import ImageGallery from "@/app/components/ImageGallery";
 import { client } from "@/app/lib/sanity";
 import { fullProduct } from "@/app/types/interface";
@@ -12,7 +14,8 @@ async function getData(slug: string) {
     description,
     name,
     "slug":slug.current,
-    "categoryName":category->name
+    "categoryName":category->name,
+    price_id
 }
 `;
   const data = await client.fetch(query);
@@ -51,20 +54,41 @@ export default async function ProductPage({
             </div>
             <div className="mb-4 ">
               <div className="flex items-end gap-2">
-                <span className="text-xl font-bold text-gray-800 md:text-2xl ">R${data.price}</span>
-                <span className="mb-0.5 text-red-500 line-through ">R${data.price+30}</span>
+                <span className="text-xl font-bold text-gray-800 md:text-2xl ">
+                  R${data.price}
+                </span>
+                <span className="mb-0.5 text-red-500 line-through ">
+                  R${data.price + 30}
+                </span>
               </div>
               <span className="text-sm text-gray-500  ">Frete Incluso </span>
             </div>
             <div className=" mb-6 flex items-center gap-2 text-gray-500  ">
-              <Truck className="h-6 w-6 "/>
-              <span  className="text-sm"> 2-4 dias para entregar</span>
+              <Truck className="h-6 w-6 " />
+              <span className="text-sm"> 2-4 dias para entregar</span>
             </div>
             <div className="flex gap-2.5 ">
-              <Button >Adiciona no Carrinho</Button>
-              <Button variant={"secondary"} >Comprar agora</Button>
-               </div>
-               <p className="mt-12 text-base text-gray-500 tracking-wide ">{data.description}</p>
+              <AddToBag
+                currency="BRL"
+                name={data.name}
+                price={data.price}
+                description={data.description}
+                image={data.images[0]}
+                price_id={data.price_id}
+              />
+              <CheckOutNow
+                currency="BRL"
+                name={data.name}
+                price={data.price}
+                description={data.description}
+                image={data.images[0]}
+                key={data._id}
+                price_id={data.price_id}
+              />
+            </div>
+            <p className="mt-12 text-base tracking-wide text-gray-500 ">
+              {data.description}
+            </p>
           </div>
         </div>
       </div>
