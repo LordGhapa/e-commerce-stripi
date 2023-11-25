@@ -8,8 +8,8 @@ export default function CartProvider({ children }: { children: ReactNode }) {
       mode="payment"
       cartMode="client-only"
       stripe={process.env.NEXT_PUBLIC_STRIPE_KEY as string}
-      successUrl="stripe-loja.vercel.app/stripe/success"
-      cancelUrl="stripe-loja.vercel.app/stripe/error"
+      successUrl="https://stripe-loja.vercel.app/stripe/success"
+      cancelUrl="https://stripe-loja.vercel.app/stripe/error"
       currency="BRL"
       billingAddressCollection={false}
       shouldPersist={true}

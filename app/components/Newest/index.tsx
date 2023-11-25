@@ -25,9 +25,9 @@ export default async function Newest() {
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-            Our Newest products
+            Nossos mais novos produtos
           </h2>
-{/* 
+          {/* 
           <Link className="flex items-center gap-x-1 text-primary" href="/all">
             See All
             <span>

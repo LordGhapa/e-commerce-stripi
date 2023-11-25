@@ -15,11 +15,11 @@ export default async function Hero() {
       <div className="mb-8 flex flex-wrap justify-between md:mb-16 ">
         <div className="mb-6 flex w-full flex-col justify-center sm:mb-12 lg:mb-0 lg:w-1/3 lg:pb-24 lg:pt-48 ">
           <h1 className="mb-4 text-4xl font-bold text-black sm:text-5xl md:mb-8 md:text-6xl ">
-            Top Fashion For a top Price!
+            Moda Top Por um Preço Top!
           </h1>
           <p className="max-w-md leading-relaxed text-gray-500 xl:text-xl  ">
-            We sell only to most exclusive and high quality products for you. We
-            are the best so come and shop with us.
+            Vendemos apenas os produtos mais exclusivos e de alta qualidade para
+            você. Nós são os melhores, então venha comprar conosco.
           </p>
         </div>
         <div className=" mb-12 flex w-full md:mb-16 lg:w-2/3">
@@ -45,7 +45,7 @@ export default async function Hero() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-between gap-8 md:flex-row ">
+      {/* <div className="flex flex-col items-center justify-between gap-8 md:flex-row ">
         <div className=" flex h-12 w-64 divide-x overflow-hidden rounded-lg border">
           <Link
             href="/Men"
@@ -66,7 +66,7 @@ export default async function Hero() {
             Teens
           </Link>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
