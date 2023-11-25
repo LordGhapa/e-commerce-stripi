@@ -52,7 +52,7 @@ export default function Navbar() {
           >
             <ShoppingBag />
             <span className="hidden text-xs font-semibold text-gray-500 sm:block ">
-              Cart
+              Carrinho
             </span>
           </Button>
         </div>
