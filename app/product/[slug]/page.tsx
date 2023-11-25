@@ -6,6 +6,8 @@ import { fullProduct } from "@/app/types/interface";
 import { Button } from "@/components/ui/button";
 import { Star, Truck } from "lucide-react";
 
+export const dynamic = "force-dynamic";
+
 async function getData(slug: string) {
   const query = `*[_type=="production" && slug.current=="${slug}"][0]{
   _id,
